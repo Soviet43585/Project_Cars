@@ -1,5 +1,5 @@
 spring:
     datasource:
-        url: ${DB_URL:jdbc:mysql://localhost:3306/project?serverTimezone=UTC}
+        url: ${DB_URL:jdbc:mysql://localhost:3306/cource_project?serverTimezone=UTC}
         username: ${DB_USERNAME:root}
         password: ${DB_PASSWORD:root}

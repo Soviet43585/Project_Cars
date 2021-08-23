@@ -3,6 +3,7 @@ package com.example.demo.domain;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @NoArgsConstructor
 @Entity
@@ -23,6 +24,9 @@ public class Car {
 
     @Column(nullable = false)
     private Integer milage;
+
+    @OneToMany(mappedBy = "car")
+    private Set<Travel> travels;
 
     public Integer getId() {
         return id;
