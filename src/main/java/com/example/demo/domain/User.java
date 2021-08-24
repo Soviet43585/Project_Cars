@@ -1,10 +1,14 @@
 package com.example.demo.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Set;
 
+@Builder
+@AllArgsConstructor
 @Entity
 @NoArgsConstructor
 public class User {
@@ -24,9 +28,6 @@ public class User {
     @Column
     @Enumerated(EnumType.STRING)
     private Role role = Role.ROLE_USER;
-
-    @OneToMany(mappedBy = "user")
-    private Set<Travel> travels;
 
     public Integer getId() {
         return id;
@@ -68,11 +69,4 @@ public class User {
         this.role = role;
     }
 
-    public Set<Travel> getTravels() {
-        return travels;
-    }
-
-    public void setTravels(Set<Travel> travels) {
-        this.travels = travels;
-    }
 }

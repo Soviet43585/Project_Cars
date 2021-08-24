@@ -1,8 +1,10 @@
 package com.example.demo.controller;
 
+import com.example.demo.domain.User;
 import com.example.demo.dto.request.CreateCarRequest;
 import com.example.demo.dto.request.UpdateCarRequest;
 import com.example.demo.dto.response.CarResponse;
+import com.example.demo.security.UserPrincipal;
 import com.example.demo.service.CarService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -13,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/car")
+@RequestMapping("/api/admin")
 public class CarController {
 
     private final CarService carService;

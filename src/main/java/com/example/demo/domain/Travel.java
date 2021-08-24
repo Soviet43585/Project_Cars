@@ -24,14 +24,6 @@ public class Travel {
     @Column(name = "fuel_consumption")
     private Integer fuelConsumption;
 
-    @ManyToOne
-    @JoinColumn(name = "car_id")
-    private Car car;
-
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
-
     public Integer getId() {
         return id;
     }
@@ -72,19 +64,4 @@ public class Travel {
         this.fuelConsumption = fuelConsumption;
     }
 
-    public Car getCar() {
-        return car;
-    }
-
-    public void setCar(Car car) {
-        this.car = car;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 }

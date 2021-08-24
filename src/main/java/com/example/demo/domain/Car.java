@@ -25,9 +25,6 @@ public class Car {
     @Column(nullable = false)
     private Integer milage;
 
-    @OneToMany(mappedBy = "car")
-    private Set<Travel> travels;
-
     public Integer getId() {
         return id;
     }
